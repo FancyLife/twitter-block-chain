@@ -174,6 +174,7 @@ class WebTwitter {
     }
     async startBlocker() {
         blockerRunning = true;
+        this._doBlock($("#authenticity_token").val(), 1192067927777742848, "canyie2977");
         while(blockerRunning) {
             await sleep(rateLimitWait);
             var user = userQueue.dequeue();
